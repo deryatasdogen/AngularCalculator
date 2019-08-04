@@ -7,6 +7,7 @@ import { DisplayComponent } from './components/display/display.component';
 import { OperationComponent } from './components/operation/operation.component';
 import { ButtonComponent } from './components/button/button.component';
 import { NumberpadComponent } from './components/numberpad/numberpad.component';
+import { CalculatorComponent } from './components/calculator/calculator.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NumberpadComponent } from './components/numberpad/numberpad.component';
     DisplayComponent,
     OperationComponent,
     ButtonComponent,
-    NumberpadComponent
+    NumberpadComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,

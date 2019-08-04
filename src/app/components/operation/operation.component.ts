@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-operation',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OperationComponent implements OnInit {
 
+  @Input()type: number ;
+  @Input()text: string ;
   constructor() { }
 
   ngOnInit() {

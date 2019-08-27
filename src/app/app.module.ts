@@ -8,6 +8,7 @@ import { OperationComponent } from './components/operation/operation.component';
 import { ButtonComponent } from './components/button/button.component';
 import { NumberpadComponent } from './components/numberpad/numberpad.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CalculatorComponent } from './components/calculator/calculator.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]

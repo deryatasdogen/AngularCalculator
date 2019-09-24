@@ -1,4 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Store, select} from '@ngrx/store';
+import * as DisplayActions from '../display.action';
+
 
 @Component({
   selector: 'app-button',
@@ -10,10 +14,18 @@ export class ButtonComponent implements OnInit {
   @Input()type: number ;
   @Input()text: string ;
 
-
-  constructor() { }
+  constructor(private store: Store<{ display: string }>) {
+    
+  }
+  
 
   ngOnInit() {
+  }
+
+  displayNumber() {
+    console.log("clicked");
+    const action = new DisplayActions.DisplayChanged(this.text + "");
+    this.store.dispatch(action);
   }
 
 }

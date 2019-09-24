@@ -9,6 +9,9 @@ import { ButtonComponent } from './components/button/button.component';
 import { NumberpadComponent } from './components/numberpad/numberpad.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { displayReducer } from './components/display.reducer';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,7 @@ import { StoreModule } from '@ngrx/store';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({})
+    StoreModule.forRoot({display:displayReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]

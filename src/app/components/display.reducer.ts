@@ -1,4 +1,4 @@
-import { createReducer, on } from '@ngrx/store';
+import { createReducer, on, State } from '@ngrx/store';
 import * as DisplayActions from './display.action';
 //add reset next
 
@@ -14,6 +14,11 @@ export function displayReducer(state, action: DisplayActions.All) {
       console.log('New State:', newState);
       return newState;
     break;
+    case DisplayActions.RESULT_CALCULATED:
+       var result = eval(state);
+       console.log("Result:", result);
+       return result;
+
     default:
       return initialState;
   }

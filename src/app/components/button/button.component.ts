@@ -23,9 +23,15 @@ export class ButtonComponent implements OnInit {
   }
 
   displayNumber() {
-    console.log("clicked");
-    const action = new DisplayActions.DisplayChanged(this.text + "");
-    this.store.dispatch(action);
+    if(this.text==="="){
+      const result_action = new DisplayActions.ResultCalculated("")
+      this.store.dispatch(result_action);
+    }else{
+      console.log("clicked");
+      const action = new DisplayActions.DisplayChanged(this.text + "");
+      this.store.dispatch(action);
+    }
+   
   }
 
 }

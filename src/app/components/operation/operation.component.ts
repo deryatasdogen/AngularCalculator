@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+
 @Component({
   selector: 'app-operation',
   templateUrl: './operation.component.html',
@@ -13,5 +14,6 @@ export class OperationComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

@@ -1,6 +1,5 @@
 import { createReducer, on, State } from '@ngrx/store';
 import * as DisplayActions from './display.action';
-//add reset next
 
 export const initialState = "";
 
@@ -18,6 +17,8 @@ export function displayReducer(state, action: DisplayActions.All) {
        var result = eval(state);
        console.log("Result:", result);
        return result;
+    case DisplayActions.RESET_SCREEN:
+      return initialState;
 
     default:
       return initialState;

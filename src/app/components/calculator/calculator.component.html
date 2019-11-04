@@ -1,0 +1,13 @@
+<mat-toolbar>
+        <span>Calculator</span>
+</mat-toolbar>
+<p></p>
+    <mat-grid-list cols="8" rowHeight = "150px">
+        <mat-grid-tile [colspan]="2"></mat-grid-tile>
+        <mat-grid-tile [colspan] = "4" [rowspan] = "1" style="background-color:rgba(95, 209, 60, 0.555)"><app-display></app-display></mat-grid-tile>
+        <mat-grid-tile [colspan]="2"></mat-grid-tile>
+        <mat-grid-tile [colspan]="2"></mat-grid-tile>
+        <mat-grid-tile [colspan] = "3" [rowspan] = "3" style="background-color:rgba(192, 108, 52, 0.39)"><app-numberpad></app-numberpad></mat-grid-tile>
+        <mat-grid-tile [colspan] = "1" [rowspan] = "3" style="background-color:rgba(128, 128, 128, 0.39)"><app-operation></app-operation></mat-grid-tile>
+        <mat-grid-tile [colspan]="4"></mat-grid-tile>
+    </mat-grid-list>      

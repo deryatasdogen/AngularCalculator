@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CalculatorComponent } from './calculator.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('CalculatorComponent', () => {
   let component: CalculatorComponent;
@@ -8,7 +9,8 @@ describe('CalculatorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CalculatorComponent ]
+      declarations: [ CalculatorComponent ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   }));
@@ -19,7 +21,7 @@ describe('CalculatorComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create CalculatorComponent', () => {
     expect(component).toBeTruthy();
   });
 });

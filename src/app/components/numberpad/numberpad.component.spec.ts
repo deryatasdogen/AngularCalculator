@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NumberpadComponent } from './numberpad.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('NumberpadComponent', () => {
   let component: NumberpadComponent;
@@ -8,7 +9,8 @@ describe('NumberpadComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NumberpadComponent ]
+      declarations: [ NumberpadComponent ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   }));
@@ -19,7 +21,7 @@ describe('NumberpadComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create NumberpadComponent', () => {
     expect(component).toBeTruthy();
   });
 });

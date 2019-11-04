@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store, select} from '@ngrx/store';
-import * as DisplayActions from '../display.action';
+import * as DisplayActions from '../display.action'; 
 
 
 @Component({
